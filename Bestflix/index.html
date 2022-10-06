@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js"></script>
+    <title>BestFlix | o streaming mais bonto que o NetFlix</title>
+</head>
+<body>
+   <header>
+        <div class="container main-header">
+            <a href="index.html">
+                <div id="logo" >
+                    <svg  alt="Logo BestFlix" fill="dodgerblue" width="8px" height="8px" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M.5 0c-.28 0-.5.23-.5.5v4c0 .28.23.5.5.5h5c.28 0 .5-.22.5-.5v-1.5l1 1h1v-3h-1l-1 1v-1.5c0-.28-.22-.5-.5-.5h-5z" transform="translate(0 1)" />
+                    </svg>
+                    <h1>Best<span>Flix</span></h1>
+                </div>
+            </a>
+            <div id="main-nav">
+                <nav>
+                    <ul>
+                        <li><a href="/Bestflix/" class="active">Home</a></li>
+                        <li><a href="/Bestflix/">Movies</a></li>
+                        <li><a href="/Bestflix/">Series</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+   </header>
+   <header id="content-heder" class="container flex-sb">
+        <div class="breadcrumb"></div>
+        <button onclick="showModal('#modal-cadastrar')">Adicionar Filme</button>
+   </header>
+   <section class="container">
+        <h1 class="section-title">Produções</h1>
+        <article id="production">
+            <div class="card-movie">
+                <div class="mask"></div>
+                <img src="assets/img/kz7xJLowO4x0BpcB1IJb9uIXgrq-185x278.jpg" alt="">
+                <h3>Venon - Tempo de Carnificina</h3>
+                <p>Ação</p>
+            </div>
+            <div class="card-movie">
+                <img src="" alt="">
+                <h2></h2>
+                <p></p>
+            </div>
+            <div class="card-movie">
+                <img src="" alt="">
+                <h2></h2>
+                <p></p>
+            </div>
+
+        </article>
+    
+   </section>
+   <footer>
+        <p>&copy; copyright 2022  |  Todos os direitos Reservado</p>
+        <p>Gabriel Lemos</p>
+   </footer>
+    <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
+        <div class="modal-body">
+            <h1>Cadastrar Produção</h1>
+            <form>
+                <label>Title:</label>
+                <input type="text" name="title">
+                <label>Descriprion:</label>
+                <input type="text" name="Descriprion">
+                <label>Category:</label>
+                <input type="text" name="Category">
+                <label>Cover:</label>
+                <input type="text" name="Cover">
+                <label>Classification:</label>
+                <input type="text" name="Classification">
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+   <script src="assets/js/main.js"></script>
+</body>
+</html>
