@@ -5,6 +5,6 @@ function showModal(idModal) {
 function hideModal(idModal, event) {
     if (event.target.className == 'modal') {
         const modal = document.querySelector(idModal)
-        modal.style.display ='none'
+        modal.style.display ='none';
     }
 }
