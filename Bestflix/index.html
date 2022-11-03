@@ -8,7 +8,7 @@
     <script src="assets/js/main.js"></script>
     <title>BestFlix | o streaming mais bonto que o NetFlix</title>
 </head>
-<body>
+<body onload="loadProductions()">
    <header>
         <div class="container main-header">
             <a href="index.html">
@@ -30,33 +30,29 @@
             </div>
         </div>
    </header>
-   <header id="content-heder" class="container flex-sb">
-        <div class="breadcrumb"></div>
-        <button onclick="showModal('#modal-cadastrar')">Adicionar Filme</button>
-   </header>
-   <section class="container">
-        <h1 class="section-title">Produções</h1>
-        <article id="production">
-            <div class="card-movie">
-                <div class="mask"></div>
-                <img src="" alt="">
-                <h3>Venon - Tempo de Carnificina</h3>
-                <p>Ação</p>
-            </div>
-            <div class="card-movie">
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
-            </div>
-            <div class="card-movie">
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
-            </div>
-
-        </article>
-    
-   </section>
+   <main>
+    <header id="content-heder" class="container flex-sb">
+            <div class="breadcrumb"></div>
+            <button onclick="showModal('#modal-cadastrar')">Adicionar Filme</button>
+    </header>
+    <section class="container">
+            <h1 class="section-title">Produções</h1>
+            <article id="production">
+                <div class="card-movie">
+                </div>
+                <div class="card-movie">
+                </div>
+                <div class="card-movie">
+                </div>
+                <div class="card-movie">
+                </div>
+                <div class="card-movie">
+                </div>
+                <div class="card-movie">
+                </div>
+            </article>
+    </section>
+   </main>
    <footer>
         <p>&copy; copyright 2022  |  Todos os direitos Reservado</p>
         <p>Gabriel Lemos</p>
@@ -64,18 +60,38 @@
     <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
         <div class="modal-body">
             <h1>Cadastrar Produção</h1>
-            <form>
+            <form onsubmit="insert(event)">
                 <label>Title:</label>
                 <input type="text" name="title">
                 <label>Descriprion:</label>
-                <input type="text" name="Descriprion">
+                <input type="text" name="description">
                 <label>Category:</label>
-                <input type="text" name="Category">
+                <input type="text" name="category">
                 <label>Cover:</label>
-                <input type="text" name="Cover">
+                <input type="text" name="cover">
                 <label>Classification:</label>
-                <input type="text" name="Classification">
+                <input type="text" name="classification">
                 <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
+        <div class="modal-body">
+            <h1>Editar Produção</h1>
+            <form onsubmit="insert(event)">
+                <label>Title:</label>
+                <input type="text" name="title">
+                <label>Descriprion:</label>
+                <input type="text" name="description">
+                <label>Category:</label>
+                <input type="text" name="category">
+                <label>Cover:</label>
+                <input type="text" name="cover">
+                <label>Classification:</label>
+                <input type="text" name="classification">
+                <input type="hidden" name="id">
+
+                <button type="submit">Alterar</button>
             </form>
         </div>
     </div>
